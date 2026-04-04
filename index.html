@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faiyad Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+
+<!-- Navbar -->
+<nav>
+  <h2 class="logo">Faiyad</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#posters">Posters</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>I Create Cinematic Edits 🎬</h1>
+  <p>Video Editing • Poster Design • Creative Visuals</p>
+  <div class="hero-buttons">
+  <button onclick="scrollToWork()">View My Work</button>
+
+<a 
+  href="https://wa.me/8801985648588?text=Hi%20I%20want%20to%20hire%20you" target="_blank" class="hire-btn">
+  Hire Me
+</a>
+</div>
+</section>
+
+<!-- Videos -->
+<section id="videos" class="section">
+  <h2>My Video Edits</h2>
+  <div class="card-container">
+
+<div class="card video-card">
+  <a href="https://youtu.be/OztbL7NrFys" target="_blank">
+    <div class="video-thumb">
+      <img src="https://img.youtube.com/vi/OztbL7NrFys/hqdefault.jpg">
+      <div class="play-btn">▶</div>
+    </div>
+  </a>
+</div>
+
+<div class="card video-card">
+  <a href="https://youtu.be/Q3K9wil5M7k" target="_blank">
+    <div class="video-thumb">
+      <img src="https://img.youtube.com/vi/Q3K9wil5M7k/hqdefault.jpg">
+      <div class="play-btn">▶</div>
+    </div>
+  </a>
+</div>
+
+  </div>
+</section>
+
+<!-- Posters -->
+<section id="posters" class="section">
+  <h2>Poster Designs</h2>
+  <div class="card-container">
+
+    <div class="card poster-card" onclick="openImage('images/poster1.jpg')">
+      <img src="images/poster1.jpg">
+    </div>
+
+    <div class="card poster-card" onclick="openImage('images/poster2.jpg')">
+      <img src="images/poster2.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- Video Popup -->
+<div class="video-popup" id="popup">
+  <span id="closeBtn">&times;</span>
+  <iframe id="popupVideo"></iframe>
+</div>
+
+<!-- Image Popup -->
+<div class="image-popup" id="imagePopup">
+  <span id="closeImage">&times;</span>
+  <img id="popupImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

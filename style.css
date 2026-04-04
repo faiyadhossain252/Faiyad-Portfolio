@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a2e, #16213e, #0f3460);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
+
+/* Cursor */
+.cursor {
+  width: 15px;
+  height: 15px;
+  background: #00ffcc;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+
+  background: linear-gradient(45deg, #00ffcc, #00aaff);
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Sections */
+.section {
+  padding: 60px 50px;
+  margin: 20px;
+  
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.4s;
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0,255,204,0.4);
+}
+
+/* Video */
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+/* Posters */
+.poster-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.poster-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Popups */
+.video-popup,
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+}
+
+.video-popup iframe {
+  width: 80%;
+  height: 60%;
+}
+
+.image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#closeBtn,
+#closeImage {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.video-card {
+  padding: 0;
+}
+
+.video-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Dark overlay */
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+/* Play button */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  z-index: 2;
+}
+
+/* Hover effect */
+.video-thumb:hover img {
+  transform: scale(1.1);
+}
+.hero h1 {
+  font-size: 50px;
+  background: linear-gradient(to right, #00ffcc, #00aaff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.logo {
+  font-size: 24px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hire-btn {
+  background: linear-gradient(45deg, #25D366, #00ffcc);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #25D366;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hire-btn {
+  background: linear-gradient(45deg, #00ffcc, #00aaff);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(0,255,204,0.3);
+}
